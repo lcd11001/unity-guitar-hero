@@ -44,10 +44,13 @@ public class Activator : MonoBehaviour
                 {
                     note.GetComponent<Note>().SetAvailable(false);
                     Destroy(note);
-                    AddScore();
                     gameManager.AddStreak();
+                    gameManager.AddScore();
                     active = false;
-                    note = null;
+                }
+                else
+                {
+                    gameManager.ResetStreak();
                 }
             }
         }
@@ -78,10 +81,7 @@ public class Activator : MonoBehaviour
         active = false;
     }
 
-    void AddScore()
-    {
-        PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + gameManager.GetScore());
-    }
+    
 
     IEnumerator Pressed()
     {

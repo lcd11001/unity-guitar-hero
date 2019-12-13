@@ -42,6 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1679768993
+    locked: 0
+  - name: Activator
+    uniqueID: 4153525061
+    locked: 0
   - name: Note
     uniqueID: 4120498995
     locked: 0
